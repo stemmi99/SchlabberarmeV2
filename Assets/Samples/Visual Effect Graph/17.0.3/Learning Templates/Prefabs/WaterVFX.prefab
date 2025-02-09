@@ -85,7 +85,7 @@ VFXRenderer:
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
-  m_MotionVectors: 1
+  m_MotionVectors: 0
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
@@ -210,10 +210,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6136877223165060765, guid: 0bc1879d774271a4bab62da6b2f6eac2, type: 3}
       propertyPath: m_Name
-      value: TurntableWithBackdrop_VFX
+      value: WaterVFX
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1652826308818905150, guid: 0bc1879d774271a4bab62da6b2f6eac2, type: 3}
+    - {fileID: 4042383836484162295, guid: 0bc1879d774271a4bab62da6b2f6eac2, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5494305127744294946, guid: 0bc1879d774271a4bab62da6b2f6eac2, type: 3}
       insertIndex: -1
