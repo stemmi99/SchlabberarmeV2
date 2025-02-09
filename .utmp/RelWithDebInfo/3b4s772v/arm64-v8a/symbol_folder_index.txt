@@ -1,0 +1,1 @@
+/Users/maikestemmer/Unity Projects/SchlabberarmeV2/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/3b4s772v/obj/arm64-v8a
