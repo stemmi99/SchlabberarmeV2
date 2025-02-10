@@ -675,7 +675,7 @@ Transform:
   m_GameObject: {fileID: 25505739}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: -0.005, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1177,11 +1177,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f29d2921af2547eda6ba2d399137abf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.005
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f29d2921af2547eda6ba2d399137abf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.10100007
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f29d2921af2547eda6ba2d399137abf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2818,8 +2818,8 @@ Rigidbody:
   m_GameObject: {fileID: 1534446091}
   serializedVersion: 4
   m_Mass: 0.1
-  m_Drag: 0.2
-  m_AngularDrag: 0.1
+  m_Drag: 0.5
+  m_AngularDrag: 0.3
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -3657,7 +3657,7 @@ Transform:
   m_GameObject: {fileID: 237130952}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1.4450002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6861,8 +6861,8 @@ Rigidbody:
   m_GameObject: {fileID: 1534446089}
   serializedVersion: 4
   m_Mass: 0.1
-  m_Drag: 0.2
-  m_AngularDrag: 0.1
+  m_Drag: 0.5
+  m_AngularDrag: 0.3
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -10788,7 +10788,7 @@ Transform:
   m_GameObject: {fileID: 781693892}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1.445}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12470,8 +12470,8 @@ Rigidbody:
   m_GameObject: {fileID: 1534446092}
   serializedVersion: 4
   m_Mass: 0.1
-  m_Drag: 0.2
-  m_AngularDrag: 0.1
+  m_Drag: 0.5
+  m_AngularDrag: 0.3
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -15934,13 +15934,13 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.16636518
+    widthMultiplier: 1
     widthCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.010101318
-        value: 0.63011765
+        time: 0
+        value: 0.1328125
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -15948,8 +15948,8 @@ LineRenderer:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 1
-        value: 0.014032266
+        time: 0.983077
+        value: 0.0625
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -16097,8 +16097,8 @@ Rigidbody:
   m_GameObject: {fileID: 1534446087}
   serializedVersion: 4
   m_Mass: 0.1
-  m_Drag: 0.2
-  m_AngularDrag: 0.1
+  m_Drag: 0.5
+  m_AngularDrag: 0.3
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -17462,8 +17462,8 @@ Rigidbody:
   m_GameObject: {fileID: 1534446090}
   serializedVersion: 4
   m_Mass: 0.1
-  m_Drag: 0.2
-  m_AngularDrag: 0.1
+  m_Drag: 0.5
+  m_AngularDrag: 0.3
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -18374,7 +18374,7 @@ Transform:
   m_GameObject: {fileID: 1353702201}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1.4450002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21213,8 +21213,8 @@ Rigidbody:
   m_GameObject: {fileID: 1534446093}
   serializedVersion: 4
   m_Mass: 0.1
-  m_Drag: 0.2
-  m_AngularDrag: 0.1
+  m_Drag: 0.5
+  m_AngularDrag: 0.3
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -21240,8 +21240,8 @@ Rigidbody:
   m_GameObject: {fileID: 1534446094}
   serializedVersion: 4
   m_Mass: 0.1
-  m_Drag: 0.2
-  m_AngularDrag: 0.1
+  m_Drag: 0.5
+  m_AngularDrag: 0.3
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -21267,8 +21267,8 @@ Rigidbody:
   m_GameObject: {fileID: 1534446095}
   serializedVersion: 4
   m_Mass: 0.1
-  m_Drag: 0.2
-  m_AngularDrag: 0.1
+  m_Drag: 0.5
+  m_AngularDrag: 0.3
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -21294,8 +21294,8 @@ Rigidbody:
   m_GameObject: {fileID: 1534446096}
   serializedVersion: 4
   m_Mass: 0.1
-  m_Drag: 0.2
-  m_AngularDrag: 0.1
+  m_Drag: 0.5
+  m_AngularDrag: 0.3
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -21321,8 +21321,8 @@ Rigidbody:
   m_GameObject: {fileID: 1534446097}
   serializedVersion: 4
   m_Mass: 0.1
-  m_Drag: 0.2
-  m_AngularDrag: 0.1
+  m_Drag: 0.5
+  m_AngularDrag: 0.3
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -24364,8 +24364,8 @@ Rigidbody:
   m_GameObject: {fileID: 1534446086}
   serializedVersion: 4
   m_Mass: 0.1
-  m_Drag: 0.2
-  m_AngularDrag: 0.1
+  m_Drag: 0.5
+  m_AngularDrag: 0.3
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -26108,8 +26108,8 @@ Rigidbody:
   m_GameObject: {fileID: 1534446088}
   serializedVersion: 4
   m_Mass: 0.1
-  m_Drag: 0.2
-  m_AngularDrag: 0.1
+  m_Drag: 0.5
+  m_AngularDrag: 0.3
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
