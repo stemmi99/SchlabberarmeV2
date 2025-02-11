@@ -40,7 +40,7 @@ public class AngleBasedVFXTrigger : MonoBehaviour
         correctWorldPosition += new Vector3(3.15f, -1.2f, -1.057f);  // Passe die Werte an, bis es unter der Kanne sitzt
 
         // Debug-Ausgabe der korrigierten Position
-        Debug.Log("Corrected VFX Position with Offset: " + correctWorldPosition);
+        //Debug.Log("Corrected VFX Position with Offset: " + correctWorldPosition);
 
         // Setze die Position des VFX
         vfxTransform.position = correctWorldPosition;

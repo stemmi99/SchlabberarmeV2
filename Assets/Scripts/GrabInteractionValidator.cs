@@ -1,39 +1,55 @@
 using UnityEngine;
+using Oculus;  // Für OVRHand
 
 public class GrabInteractionValidator : MonoBehaviour
 {
-    public GameObject object1;  // Erstes Objekt mit BoxCollider
-    public GameObject object2;  // Zweites Objekt, dessen Bewegung erlaubt werden soll
-    private bool canMoveObject2 = false;  // Status, ob object2 bewegt werden darf
+    public GameObject object1;  // Erstes Objekt mit Collider
+    public GameObject object2;  // Zweites Objekt, das gekoppelt werden soll
+    public OVRHand hand;        // Die Hand, um die Pinch-Geste zu überprüfen
 
-    private void OnCollisionEnter(Collision collision)
+    private bool isColliding = false;
+    private bool isHolding = false;  // Zum Überprüfen, ob das Objekt gerade gehalten wird
+
+    void OnTriggerEnter(Collider other)
     {
-        // Prüfe, ob beide Objekte miteinander kollidieren
-        if ((collision.gameObject == object1 && gameObject == object2) || 
-            (collision.gameObject == object2 && gameObject == object1))
+        if (other.gameObject == object1)
         {
-            canMoveObject2 = true;
-            Debug.Log("Object 2 can now be moved!");
+            isColliding = true;
+            Debug.Log("Collision detected: Ready to grab.");
         }
     }
 
-    private void OnCollisionExit(Collision collision)
+    void OnTriggerExit(Collider other)
     {
-        // Wenn die Objekte sich nicht mehr berühren, deaktiviere die Bewegung
-        if ((collision.gameObject == object1 && gameObject == object2) || 
-            (collision.gameObject == object2 && gameObject == object1))
+        if (other.gameObject == object1)
         {
-            canMoveObject2 = false;
-            Debug.Log("Object 2 movement disabled.");
+            isColliding = false;
+            Debug.Log("Collision ended.");
         }
     }
 
     void Update()
     {
-        // Beispiel: Objekt 2 bewegen, wenn es erlaubt ist
-        if (canMoveObject2 && Input.GetKey(KeyCode.G))  // Nur ein Beispiel mit Taste G
+        // Prüfen, ob die Kollision aktiv ist und die Pinch-Geste (Daumen und Zeigefinger) gehalten wird
+        if (isColliding && hand.GetFingerIsPinching(OVRHand.HandFinger.Index))
         {
-            object2.transform.Translate(Vector3.up * Time.deltaTime);
+            if (!isHolding)
+            {
+                isHolding = true;
+                Debug.Log("Pinch detected: Object coupled.");
+            }
+
+            // Kopple Position und Rotation von object2 an object1
+            object2.transform.position = object1.transform.position;
+            object2.transform.rotation = object1.transform.rotation;
+        }
+        else
+        {
+            if (isHolding)
+            {
+                isHolding = false;
+                Debug.Log("Pinch released: Object uncoupled.");
+            }
         }
     }
 }
