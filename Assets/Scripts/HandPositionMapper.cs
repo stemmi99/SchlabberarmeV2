@@ -12,9 +12,16 @@ public class HandPositionMapper : MonoBehaviour
             // Setze die Position der Hand mit dem Offset
             transform.position = rightHandAnchor.position + positionOffset;
 
-            // Korrigiere die Rotation (Y- und Z-Achse tauschen)
-            Quaternion handRotation = rightHandAnchor.rotation;
-            transform.rotation = Quaternion.Euler(handRotation.eulerAngles.x, handRotation.eulerAngles.z, handRotation.eulerAngles.y);
+            // Hole die Euler-Winkel der Rotation
+            Vector3 handRotation = rightHandAnchor.rotation.eulerAngles;
+
+            // Spiegle die Y- und Z-Werte
+            handRotation.x *= -1;
+            handRotation.y *= -1;
+            handRotation.z *= -1;
+
+            // Setze die gespiegelte Rotation
+            transform.rotation = Quaternion.Euler(handRotation);
         }
         else
         {
