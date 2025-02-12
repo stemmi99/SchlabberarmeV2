@@ -1,5 +1,5 @@
 using UnityEngine;
-using Oculus;  // Für OVRHand
+using Oculus;
 
 public class GrabInteractionValidator : MonoBehaviour
 {
@@ -12,6 +12,15 @@ public class GrabInteractionValidator : MonoBehaviour
 
     private bool isColliding = false;
     private bool isHolding = false;  // Zum Überprüfen, ob das Objekt gerade gehalten wird
+    private Vector3 originalPosition;
+    private Quaternion originalRotation;
+
+    void Start()
+    {
+        // Ursprüngliche Position und Rotation speichern
+        originalPosition = object2.transform.position;
+        originalRotation = object2.transform.rotation;
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -33,7 +42,7 @@ public class GrabInteractionValidator : MonoBehaviour
 
     void Update()
     {
-        // Prüfen, ob die Kollision aktiv ist und die Pinch-Geste (Daumen und Zeigefinger) gehalten wird
+        // Prüfen, ob die Kollision aktiv ist und die Pinch-Geste gehalten wird
         if (isColliding && hand.GetFingerIsPinching(OVRHand.HandFinger.Index))
         {
             if (!isHolding)
@@ -58,7 +67,34 @@ public class GrabInteractionValidator : MonoBehaviour
             {
                 isHolding = false;
                 Debug.Log("Pinch released: Object uncoupled.");
+
+                // Führe das Objekt zurück zur ursprünglichen Position und Rotation
+                StartCoroutine(ReturnToOriginalPosition());
             }
         }
+    }
+
+    System.Collections.IEnumerator ReturnToOriginalPosition()
+    {
+        float duration = 0.5f;  // Dauer der Rückkehrbewegung (in Sekunden)
+        float elapsedTime = 0f;
+        Vector3 startPosition = object2.transform.position;
+        Quaternion startRotation = object2.transform.rotation;
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            float t = elapsedTime / duration;
+
+            // Interpoliere Position und Rotation
+            object2.transform.position = Vector3.Lerp(startPosition, originalPosition, t);
+            object2.transform.rotation = Quaternion.Slerp(startRotation, originalRotation, t);
+
+            yield return null;
+        }
+
+        // Stelle sicher, dass das Objekt exakt an der ursprünglichen Position/Rotation endet
+        object2.transform.position = originalPosition;
+        object2.transform.rotation = originalRotation;
     }
 }

@@ -17,8 +17,8 @@ public class HandPositionMapperLinks : MonoBehaviour
 
             // Spiegle die Y- und Z-Werte
             handRotation.x *= -1;
-            handRotation.y *= -1;
-            handRotation.z *= -1;
+            handRotation.y *= 1;
+            handRotation.z *= 1;
 
             // Setze die gespiegelte Rotation
             transform.rotation = Quaternion.Euler(handRotation);
